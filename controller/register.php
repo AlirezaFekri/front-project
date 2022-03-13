@@ -40,7 +40,7 @@ include "dbConnect.php";
         $qu = "INSERT INTO users($fieldName) VALUES ($vals)";
 
         //set charset
-        $connectDB->character_set_name("utf8mb4");
+        $connectDB->set_charset("utf8mb4");
 
         //execute query
         $result = $connectDB->query($qu);

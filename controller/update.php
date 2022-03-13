@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
        where user_name = '$user'";
 
     //set charset
-    $connectDB->character_set_name("utf8mb4");
+    $connectDB->set_charset("utf8mb4");
 
     //execute query
     $result = $connectDB->query($qu);
