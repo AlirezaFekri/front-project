@@ -1,0 +1,25 @@
+.table{
+    border: 1px solid ;
+    width: 50%;
+    border-collapse: collapse;
+
+}
+table{
+    margin: 5% auto;
+}
+.th{
+    border: 1px solid ;
+    height: 20%;
+    font-size: 1.2em;
+    text-align: center;
+}
+.tr{
+    border: 1px solid ;
+
+    font-size: 1.2em;
+    text-align: center;
+}
+td{
+    border: 1px solid ;
+    padding: 1%;
+}
