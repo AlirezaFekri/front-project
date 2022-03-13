@@ -39,6 +39,9 @@ if (isset($_POST['submit'])) {
        email = '$email'
        where user_name = '$user'";
 
+    //set charset
+    $connectDB->character_set_name("utf8mb4");
+
     //execute query
     $result = $connectDB->query($qu);
 
