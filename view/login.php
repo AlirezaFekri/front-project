@@ -15,7 +15,7 @@
             <label for="uname">نام کاربری</label>
             <input type="text" placeholder="نام کاربری را وارد کنید" name="uname" required>
 
-            <label for="psw">رمز عبور</label>
+            <label for="psw">عبور</label>
             <input type="password" placeholder="رمز عبور وارد کنید" name="psw" required>
 
             <label>
