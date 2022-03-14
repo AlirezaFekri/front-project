@@ -1,0 +1,6 @@
+textarea{
+    height:     9em;
+}
+input:not( [type="submit"], [type="checkbox"] ), textarea{
+    width:      50%;
+}

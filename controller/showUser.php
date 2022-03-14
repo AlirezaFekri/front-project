@@ -1,8 +1,12 @@
 <?php
     include"dbConnect.php";
-    $connectDB = new mysqli($dbHost, $dbUser, $dbPassword,$dbName);
+    include "../library/db.php";
+
+    $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName, $dbCharset);
+
     $qu = "select * from users";
+
     $result = $connectDB -> query($qu);
-    $connectDB ->close();
+
 
     include "../view/showUser.php";

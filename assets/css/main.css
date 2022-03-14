@@ -1,0 +1,27 @@
+body *{
+    font-family: "B Koodak","B Homa";
+    direction: rtl;
+    text-align: right;
+    vertical-align: middle;
+
+}
+form div *{
+    vertical-align: middle;
+}
+.content-center{
+    margin: 5% auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 20px 20px 50px 10px rgba(51, 49, 49, 0.3);
+}
+.error{
+    color: red;
+    font-size: 1.5em;
+
+}
+span{
+    color: rgb(255,0,0);
+
+}
+

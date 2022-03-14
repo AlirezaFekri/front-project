@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://kit.fontawesome.com/355b79ec86.js" crossorigin="anonymous"></script>
 
     <title>تماس با ما</title>
 </head>
@@ -25,7 +27,18 @@
                 <label for="email">ایمیل: </label>
                 <input type="email" name="email" id="email">
             </div>
-            <button type="submit" name ="submit">ارسال</button>
+
+             <div>
+                 <input type="checkbox" name="fast" id="fast">
+                 <label for="fast">درخواست فوری </label>
+
+             </div>
+            <button type="submit" class="btn primary" name ="submit">
+
+                ارسال
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
          </form>
 </body>
 </html>

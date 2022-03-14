@@ -1,5 +1,7 @@
 <?php
 include "dbConnect.php";
+include"../library/db.php";
+
     if (isset($_POST['submit'])) {
 
         //set form value's
@@ -11,7 +13,7 @@ include "dbConnect.php";
         $email = $_POST['email'];
 
         //DataBase connect
-        $connectDB = new mysqli($dbHost, $dbUser, $dbPassword,$dbName);
+        $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
 
         //value's to array
         $attr = [
@@ -24,36 +26,23 @@ include "dbConnect.php";
         ];
 
         // $fieldNames = array_keys($data);
-        // $values = array_values($data);
         $fieldName = "";
-        $vals = "";
 
         foreach ($attr as $key => $value) {
             $fieldName .= $key . ', ';
-            $vals .= "'$value', ";
         }
 
         $fieldName = substr($fieldName, 0, strlen($fieldName) - 2);
-        $vals = substr($vals, 0, strlen($vals) - 2);
 
         //Query
-        $qu = "INSERT INTO users($fieldName) VALUES ($vals)";
-
-        //set charset
-        $connectDB->set_charset("utf8mb4");
+        $qu = "INSERT INTO users($fieldName) VALUES (?,?,?,?,?,?)";
 
         //execute query
-        $result = $connectDB->query($qu);
+        $result = $connectDB->query($qu, array_values($attr));
 
-        $connectDB->close();
-
-        if ($result) {
-          echo "کاربر گرامی اکانت با موفقیت ایجاد شد";
-        } else {
-            print $connectDB->connect_error;
+        if ($result){
+            echo "کاربر با موفقیت ایجاد شد";
         }
-
-
     }else{
         include "../view/register.php";
     }

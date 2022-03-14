@@ -1,0 +1,32 @@
+:root{
+    --primary : #6750A4;
+    --primary-hover : rgba(103, 80, 164, 0.9);
+}
+
+.btn{
+    --height: 40px;
+    height: var(--height);
+    line-height: 20px;
+    margin-top: 2%;
+    border-radius: calc(var(--height) / 2);
+    padding: 0 24px;
+    text-align: center;
+    font-weight: 500;
+    font-family: "Roboto Light";
+    font-size: 14px;
+    letter-spacing: .1em; //fasele kalamat
+
+}
+
+.btn.primary{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn.primary:hover{
+    background-color: var(--primary-hover);
+}
+
+*{
+    accent-color: var(--primary);
+}

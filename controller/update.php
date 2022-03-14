@@ -1,20 +1,8 @@
 <?php
 include "dbConnect.php";
+include"../library/db.php";
 //get username of user
 $user = $_GET['username'];
-
-//connect DB & query
-$connectDB = new mysqli($dbHost, $dbUser, $dbPassword,$dbName);
-$qu = "select * from users where user_name ='$user'";
-
-//execute query
-$result = $connectDB->query($qu);
-
-//get data from DB
-$row = mysqli_fetch_array($result);
-
-//close connection
-$connectDB->close();
 
 //form validate
 if (isset($_POST['submit'])) {
@@ -28,26 +16,42 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
 
     //DataBase connect
-    $connectDB = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
+    $connectDB = new DB($dbHost, $dbUser, $dbPassword, $dbName, $dbCharset);
 
-    //Query
-    $qu = "UPDATE users SET fname = '$name',
-     family = '$family', 
-     user_name = '$username',
-      pass = '$password', 
-      phone_number = '$phoneNumber',
-       email = '$email'
-       where user_name = '$user'";
 
-    //set charset
-    $connectDB->set_charset("utf8mb4");
+    if (isset($password) && $password !== "") {
+        //Query
+        $qu = "UPDATE users SET fname = ?,
+                family = ?, 
+                user_name = ?,
+                pass = ?, 
+                phone_number = ?,
+                email = ?
+        where user_name = ?";
 
-    //execute query
-    $result = $connectDB->query($qu);
+        //execute query
+        $result = $connectDB->query($qu, $name, $family, $username, $password, $phoneNumber, $email, $user);
 
-    //close DB
-    $connectDB->close();
+        //close DB
+        $connectDB->close();
+    }
+    else{
 
+        //Query
+        $qu = "UPDATE users SET fname = ?,
+     family = ?, 
+     user_name = ?,
+      phone_number = ?,
+       email = ?
+       where user_name = ?";
+
+        //execute query
+        $result = $connectDB->query($qu, $name, $family, $username, $phoneNumber, $email, $user);
+
+        //close DB
+        $connectDB->close();
+
+    }
     //validation query
     if ($result) {
         echo "با موفقیت بروزرسانی انجام شد.";
@@ -58,6 +62,20 @@ if (isset($_POST['submit'])) {
 
 }
 else{
+
+    //connect DB & query
+    $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
+    $qu = "select * from users where user_name =?";
+
+    //execute query
+    $result = $connectDB->query($qu,$user);
+
+
+    $row = $result->fetchArray();
+
+//close connection
+    $connectDB->close();
+
     include "../view/update.php";
 }
 
