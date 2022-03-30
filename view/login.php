@@ -22,7 +22,7 @@
                 <input type="checkbox" checked="checked" name="remember"> من را به خاطر بسپار
             </label>
 
-            <button type="submit">ورود</button>
+            <button type="submit" name="submit">ورود</button>
 
         </div>
 

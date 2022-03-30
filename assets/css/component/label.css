@@ -5,3 +5,8 @@ label{
     margin: 0 1em;
     text-align: right;
 }
+.lbl{
+    display: inline-block;
+    width: 1.5em;
+    margin: 1em;
+}

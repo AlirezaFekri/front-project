@@ -13,29 +13,33 @@
 <h1>نمایش اطلاعات کاربران</h1>
 <table class="table" >
     <tr class="th">
-        <td>نام کاربری</td>
-        <td>نام</td>
-        <td>نام خانوادگی</td>
-        <td>ایمیل</td>
         <td>شماره تلفن</td>
+        <td>نام و نام خانوادگی</td>
+        <td>ایمیل</td>
         <td>رمز عبور</td>
+        <td>نشانی</td>
+        <td>نقش</td>
         <td>ویرایش</td>
     </tr>
         <?php
-       while ($row = $result->fetchAll()) {
-           var_dump($row);
-           print "
+       $rows = $result->fetchAll();
+
+       $i = 0;
+          foreach ($rows as $key[$i] => $v) {
+              print "
             <tr class='tr'>
-                <td>{$row['user_name']}</td>
-                <td>{$row ['fname']}</td>
-                <td>{$row['family']}</td>
-                <td>{$row['email']}</td>
-                <td>{$row['phone_number']}</td>
-                <td>{$row['pass']}</td>
-                <td><a href='update.php?username={$row['user_name']}'>ویرایش</a></td>
+                <td>{$v ['phone_number']}</td>
+                <td>{$v['fullname']}</td>
+                <td>{$v['email']}</td>
+                <td>{$v['pass']}</td>
+               <td>{$v['address']}</td>
+                <td>{$v['role_member']}</td>
+                
+                <td><a href='update.php?phone_number={$v['phone_number']}'>ویرایش</a></td>
             </tr>
         ";
-       }
+}
+
        echo "</table>";
         ?>
 

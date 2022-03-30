@@ -2,27 +2,21 @@
 include "dbConnect.php";
 include"../library/db.php";
 
-    if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
         //set form value's
         $name = $_POST['name'];
-        $family = $_POST['family'];
-        $username = $_POST['username'];
         $password = $_POST['password'];
         $phoneNumber = $_POST['phoneNumber'];
-        $email = $_POST['email'];
 
         //DataBase connect
         $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
 
         //value's to array
         $attr = [
-            "fname" => $name,
-            "family" => $family,
-            "user_name" => $username,
+            "fullname" => $name,
             "pass" => $password,
             "phone_number" => $phoneNumber,
-            "email" => $email
         ];
 
         // $fieldNames = array_keys($data);
@@ -34,16 +28,32 @@ include"../library/db.php";
 
         $fieldName = substr($fieldName, 0, strlen($fieldName) - 2);
 
+
+
         //Query
-        $qu = "INSERT INTO users($fieldName) VALUES (?,?,?,?,?,?)";
+        $qu = "INSERT INTO users($fieldName) VALUES (?,?,?)";
+        $qu2 = "select * from users";
 
+
+        $i =0;
         //execute query
-        $result = $connectDB->query($qu, array_values($attr));
+        $resul = $connectDB -> query($qu2);
+        $row = $resul ->fetchAll();
 
-        if ($result){
-            echo "کاربر با موفقیت ایجاد شد";
+        foreach ($row as $key[$i] => $vals){
+
+            if ($vals['phone_number'] == $phoneNumber){
+                echo "شماره تلفن از قبل ثبت نام شده است. <a href='login.php'>وارد شوید</a>";
+            }
+            else{
+                $result = $connectDB->query($qu, array_values($attr));
+
+                if ($result){
+                    echo "کاربر با موفقیت ایجاد شد";
+                }
+            }
         }
-    }else{
+}else{
         include "../view/register.php";
-    }
+}
 ?>

@@ -15,18 +15,8 @@
 
         <h1>به روز رسانی اطلاعات</h1>
         <div class = "centeral">
-            <label for="name">نام :</label>
-            <input type="text" name="name" value=""<?php if (isset($row['fname'])) echo $row['fname']?>"">
-        </div>
-        <br>
-        <div>
-            <label for="family">نام خانوادگی:</label>
-            <input type="text" name="family" value = "<?php if (isset($row['family'])) echo $row['family']?>">
-        </div>
-        <br>
-        <div>
-            <label for="userName"> نام کاربری:</label>
-            <input type="text" name="username" value = "<?php if (isset($row['user_name'])) echo $row['user_name']?>">
+            <label for="name">نام و نام خانوادگی:</label>
+            <input type="text" name="fullname" value="<?php if (isset($row['fullname'])) echo $row['fullname']?>">
         </div>
         <br>
         <div>
@@ -41,7 +31,20 @@
         <br>
         <div>
             <label for="email">ایمیل:</label>
-            <input type="email"  name="email" value = "<?php if (isset($row['email'])) echo $row['email']?>" required>
+            <input type="email"  name="email" value = "<?php if (isset($row['email'])) echo $row['email']?>" >
+        </div>
+        <br>
+        <div>
+            <label for="address">آدرس:</label>
+            <textarea name="address"  cols="50" rows="10" value = "<?php if (isset($row['address'])) echo $row['address']?>"></textarea>
+        </div>
+        <div class="radio-btn">
+            <label for="buyer" class="lbl" >خریدار</label>
+            <input type="radio" name="role" id="buyer" value = "buyer">
+            <label for="admin" class="lbl">مدیر وبسایت</label>
+            <input type="radio" name="role" id="admin" value = "admin">
+            <label for="seller" class="lbl">فروشنده</label>
+            <input type="radio" name="role" id="seller" value = "seller">
         </div>
         <div>
             <button  type="submit" name="submit">ارسال</button>
