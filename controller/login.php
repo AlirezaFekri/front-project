@@ -16,6 +16,7 @@ if (isset($_POST['submit'])){
     //execute query
     $result = $connectDB -> query($qu, $phoneNumber, $password);
 
+    $connectDB ->close();
     //validation data
     if ($result -> numRows() == 0){
         die ("نام کاربری یا رمز عبور اشتباه می باشد.");

@@ -1,9 +1,9 @@
 
 label{
     display: inline-block;
-    width:  6em;
+    width:  7em;
     margin: 0 1em;
-    text-align: right;
+    text-align: left;
 }
 .lbl{
     width: auto;

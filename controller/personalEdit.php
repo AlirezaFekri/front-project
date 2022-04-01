@@ -65,6 +65,7 @@ else{
     //execute query
     $result = $connectDB->query($qu,$userid);
 
+    $connectDB ->close();
 
     $row = $result->fetchArray();
 

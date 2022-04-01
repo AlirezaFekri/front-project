@@ -18,9 +18,14 @@
             <?php echo $phoneNumber; ?>
             </span>
         </div>
-        <div class="inline left ">
+        <div class="inline ">
             <a href=<?php echo "personalEdit.php?phone_number={$phoneNumber}"?>>
                 <i class="fa-solid fa-pen-to-square link">  ویرایش</i>
+            </a>
+        </div>
+        <div>
+            <a href=<?php echo "ticket.php?phone_number={$phoneNumber}"?>>
+                <i class="fa-solid fa-ticket">  ارسال تیکت</i>
             </a>
         </div>
 

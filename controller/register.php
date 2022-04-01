@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
 
         $fieldName = substr($fieldName, 0, strlen($fieldName) - 2);
 
+        var_dump($fieldName);
 
 
         //Query
@@ -36,13 +37,15 @@ if (isset($_POST['submit'])) {
 
         //execute query
         $resul = $connectDB -> query($qu2, $phoneNumber);
+        $connectDB ->close();
 
         //data validation
-        if ($resul ->numRows() > 0){
+        if ($resul ->numRows() == 1){
             echo "شماره تلفن از قبل ثبت نام شده است. <a href='login.php'>وارد شوید</a>";
         }
         else{
             $result = $connectDB->query($qu, array_values($attr));
+            $connectDB ->close();
             if ($result){
                 echo "کاربر با موفقیت ایجاد شد";
                 }

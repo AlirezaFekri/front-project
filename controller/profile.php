@@ -15,6 +15,7 @@ $qu = "select * from users where phone_number = ?";
 //execute query
 $row = $connectDB->query($qu, $phoneNumber);
 $row = $row->fetchArray();
+$connectDB->close();
 $fullName = $row['fullname'];
 include "../view/profile.php";
 }else{

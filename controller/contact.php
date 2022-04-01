@@ -40,6 +40,7 @@ if (isset($_POST['submit'])) {
         //execute query
         $result = $connectDB ->query($qu);
 
+        $connectDB ->close();
         if ($result) {
             //successes message
             echo "تماس شما با موفقیت ثبت شد. تماس شما برای ما مهم است و به زوی یه آن پاسخ خواهیم داد.";

@@ -6,6 +6,7 @@ body *{
 }
 form div *{
     vertical-align: middle;
+    margin: 1% 0;
 }
 .content-center{
     margin: 5% auto;
@@ -15,10 +16,19 @@ form div *{
     box-shadow: 20px 20px 50px 10px rgba(51, 49, 49, 0.3);
 }
 .right-side{
-    margin: 0 0 0 80%;
+    margin: 0 0 0 70%;
     box-shadow: 20px 20px 50px 10px rgba(51, 49, 49, 0.3);
     padding: 10px;
+    vertical-align: middle;
 }
+
+.right-side.ticket{
+    margin: 0 0 0 50%;
+    box-shadow: 20px 20px 50px 10px rgba(51, 49, 49, 0.3);
+    padding: 10px;
+    vertical-align: middle;
+}
+
 .number{
     color: rgb(145, 145, 145);
 }
