@@ -4,8 +4,9 @@
 
     $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName, $dbCharset);
 
+    //query
     $qu = "select * from users";
-
+    //execute query
     $result = $connectDB -> query($qu);
 
 

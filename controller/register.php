@@ -32,27 +32,22 @@ if (isset($_POST['submit'])) {
 
         //Query
         $qu = "INSERT INTO users($fieldName) VALUES (?,?,?)";
-        $qu2 = "select * from users";
+        $qu2 = "select * from users where phone_number = ?";
 
-
-        $i =0;
         //execute query
-        $resul = $connectDB -> query($qu2);
-        $row = $resul ->fetchAll();
+        $resul = $connectDB -> query($qu2, $phoneNumber);
 
-        foreach ($row as $key[$i] => $vals){
-
-            if ($vals['phone_number'] == $phoneNumber){
-                echo "شماره تلفن از قبل ثبت نام شده است. <a href='login.php'>وارد شوید</a>";
-            }
-            else{
-                $result = $connectDB->query($qu, array_values($attr));
-
-                if ($result){
-                    echo "کاربر با موفقیت ایجاد شد";
-                }
-            }
+        //data validation
+        if ($resul ->numRows() > 0){
+            echo "شماره تلفن از قبل ثبت نام شده است. <a href='login.php'>وارد شوید</a>";
         }
+        else{
+            $result = $connectDB->query($qu, array_values($attr));
+            if ($result){
+                echo "کاربر با موفقیت ایجاد شد";
+                }
+        }
+
 }else{
         include "../view/register.php";
 }

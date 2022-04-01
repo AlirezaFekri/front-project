@@ -38,14 +38,7 @@
             <label for="address">آدرس:</label>
             <textarea name="address"  cols="50" rows="10" value = "<?php if (isset($row['address'])) echo $row['address']?>"></textarea>
         </div>
-        <div class="radio-btn">
-            <input type="radio" name="role" id="buyer" value = "buyer">
-            <label for="buyer" class="lbl" >خریدار</label>
-            <input type="radio" name="role" id="admin" value = "admin">
-            <label for="admin" class="lbl">مدیر وبسایت</label>
-            <input type="radio" name="role" id="seller" value = "seller">
-            <label for="seller" class="lbl">فروشنده</label>
-        </div>
+
         <div>
             <button  type="submit" class="btn primary" name="submit">ارسال</button>
         </div>

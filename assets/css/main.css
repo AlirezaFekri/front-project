@@ -1,7 +1,6 @@
 body *{
     font-family: "B Koodak","B Homa";
     direction: rtl;
-    text-align: right;
     vertical-align: middle;
 
 }
@@ -15,10 +14,24 @@ form div *{
     text-align: center;
     box-shadow: 20px 20px 50px 10px rgba(51, 49, 49, 0.3);
 }
+.right-side{
+    margin: 0 0 0 80%;
+    box-shadow: 20px 20px 50px 10px rgba(51, 49, 49, 0.3);
+    padding: 10px;
+}
+.number{
+    color: rgb(145, 145, 145);
+}
 .error{
     color: red;
     font-size: 1.5em;
-
+}
+.inline{
+    display: inline;
+}
+.link:hover{
+    color: #4e4eff;
+    cursor: pointer;
 }
 span{
     color: rgb(255,0,0);
