@@ -24,8 +24,8 @@
         <?php
        $rows = $result->fetchAll();
 
-       $i = 0;
-          foreach ($rows as $key[$i] => $v) {
+
+          foreach ($rows as $key => $v) {
               print "
             <tr class='tr'>
                 <td>{$v ['phone_number']}</td>

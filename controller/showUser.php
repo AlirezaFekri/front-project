@@ -8,7 +8,7 @@
     $qu = "select * from users";
     //execute query
     $result = $connectDB -> query($qu);
-    $connectDB ->close();
+
 
 
     include "../view/showUser.php";
