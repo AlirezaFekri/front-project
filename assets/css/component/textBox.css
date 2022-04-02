@@ -9,3 +9,9 @@ input:not( [type="submit"], [type="checkbox"], [type="radio"])textarea{
     height: 20em;
     width: 30em;
 }
+#password, #phoneNumber{
+    width: 40%;
+}
+#phoneNumber{
+    margin-left: 13em;
+}
