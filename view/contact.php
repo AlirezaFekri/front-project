@@ -11,34 +11,36 @@
     <title>تماس با ما</title>
 </head>
 <body>
-    <h1>تماس با ما</h1>
-         <form method = "post">
-            <div>
-                <label for="title"> عنوان: </label>
-                <input type="text" name="title" id="title">
-            </div>
+    <div class="content-center">
+        <h1>تماس با ما</h1>
+             <form method = "post">
+                <div c>
+                    <label for="title"> عنوان: </label>
+                    <input type="text" name="title" id="title">
+                </div>
 
-            <div>
-                <label for="description">متن پیام: </label>
-                <textarea name="description" id="description"></textarea>
-            </div>
+                <div>
+                    <label for="description">متن پیام: </label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
 
-            <div>
-                <label for="email">ایمیل: </label>
-                <input type="email" name="email" id="email">
-            </div>
+                <div>
+                    <label for="email">ایمیل: </label>
+                    <input type="email" name="email" id="email">
+                </div>
 
-             <div>
-                 <input type="checkbox" name="fast" id="fast">
-                 <label for="fast">درخواست فوری </label>
+                 <div>
+                     <input type="checkbox" name="fast" id="fast">
+                     <label for="fast">درخواست فوری </label>
 
-             </div>
-            <button type="submit" class="btn primary" name ="submit">
+                 </div>
+                <button type="submit" class="btn primary" name ="submit">
 
-                ارسال
-                <i class="fa-solid fa-paper-plane"></i>
+                    ارسال
+                    <i class="fa-solid fa-paper-plane"></i>
 
-            </button>
-         </form>
+                </button>
+             </form>
+    </div>
 </body>
 </html>

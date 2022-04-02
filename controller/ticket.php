@@ -1,6 +1,6 @@
 <?php
 include "dbConnect.php";
-include"../library/db.php";
+include "../library/db.php";
 
 //get id user
 $id = $_GET['phone_number'];
@@ -16,7 +16,7 @@ if (isset($id)){
     //execute query
     $row = $connectDB->query($qu, $id);
     $row = $row->fetchArray();
-    $connectDB->close();
+
     $fullName = $row['fullname'];
 
     //form validation
@@ -24,8 +24,12 @@ if (isset($id)){
         $subject = $_POST['subject'];
         $email = $_POST['email'];
         $message = $_POST['message'];
-        $qu2 = "insert into tickets(fullname, subject, number, content) values(?,?,?,?)";
-        $result = $connectDB->query($qu2, "ss","sub", "091344","ZXzx ");
+        $qu2 = "INSERT INTO tickets(fullname, subject, number, content) VALUES (?,?,?,?)";
+        $result = $connectDB->query($qu2, $fullName,$subject, $id, $message);
+        if ($result){
+            echo "تیکت شما با موفقیت ثبت گردید و ما به زودی به آن پاسخ خواهیم داد.";
+        }
+        $connectDB -> close();
     }else {
         include "../view/ticket.php";
     }

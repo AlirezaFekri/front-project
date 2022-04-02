@@ -5,3 +5,7 @@ textarea{
 input:not( [type="submit"], [type="checkbox"], [type="radio"])textarea{
    width:      50%;
 }
+#description{
+    height: 20em;
+    width: 30em;
+}

@@ -28,8 +28,7 @@ if (isset($_POST['submit'])) {
 
         //execute query
         $result = $connectDB->query($qu, $fullname, $password, $phoneNumber, $email, $address,$userid);
-        //close DB
-        $connectDB->close();
+
     }
     else{
 
@@ -43,8 +42,6 @@ if (isset($_POST['submit'])) {
         //execute query
         $result = $connectDB->query($qu, $fullname, $phoneNumber, $email, $address,$userid);
 
-        //close DB
-        $connectDB->close();
 
     }
     //validation query
@@ -64,13 +61,7 @@ else{
 
     //execute query
     $result = $connectDB->query($qu,$userid);
-
-    $connectDB ->close();
-
     $row = $result->fetchArray();
-
-//close connection
-    $connectDB->close();
 
     include "../view/personalEdit.php";
 }

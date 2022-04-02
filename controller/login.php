@@ -18,7 +18,7 @@ if (isset($_POST['submit'])){
 
     $connectDB ->close();
     //validation data
-    if ($result -> numRows() == 0){
+    if ($result -> numRows() > 0){
         die ("نام کاربری یا رمز عبور اشتباه می باشد.");
     }else{
         header("location: profile.php?phone_number={$phoneNumber}");
