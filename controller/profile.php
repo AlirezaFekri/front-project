@@ -6,18 +6,18 @@ include"../library/db.php";
 $phoneNumber = $_GET['phone_number'];
 
 if (isset($phoneNumber)){
-//connection
-$connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
+    //connection
+    $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
 
-//query
-$qu = "select * from users where phone_number = ?";
+    //query
+    $qu = "select * from users where phone_number = ?";
 
-//execute query
-$row = $connectDB->query($qu, $phoneNumber);
-$row = $row->fetchArray();
-$connectDB->close();
-$fullName = $row['fullname'];
-include "../view/profile.php";
+    //execute query
+    $row = $connectDB->query($qu, $phoneNumber);
+    $row = $row->fetchArray();
+    $connectDB->close();
+    $fullName = $row['fullname'];
+    include "../view/profile.php";
 }else{
     header("location:login.php");
 }

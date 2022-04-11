@@ -24,7 +24,7 @@
                 من را به خاطر بسپار
             </label>
 
-            <button type="submit" class="btn primary" name="submit">ورود</button>
+            <button type="submit" class="button btn" name="submit">ورود</button>
 
         </div>
 

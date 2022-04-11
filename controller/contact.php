@@ -1,5 +1,6 @@
 <?php
-include "dbConnect.php";
+include"dbConnect.php";
+include "../library/db.php";
 
 if (isset($_POST['submit'])) {
 //validation form
@@ -32,13 +33,13 @@ if (isset($_POST['submit'])) {
 
 
         //DataBase connect
-        $connectDB = new mysqli($dbHost, $dbUser, $dbPassword,$dbName);
+        $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName, $dbCharset);
 
         //query
-        $qu = "INSERT INTO contact($fieldName) VALUES ($vals)";
+        $qu = "INSERT INTO contact($fieldName) VALUES (?,?,?)";
 
         //execute query
-        $result = $connectDB ->query($qu);
+        $result = $connectDB ->query($qu,$title,$description,$email);
 
         $connectDB ->close();
         if ($result) {
