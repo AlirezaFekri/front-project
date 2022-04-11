@@ -24,7 +24,7 @@
             <label for="pic">تصویر کالا:
                 <span>*</span>
             </label>
-            <input type="file" name="pic"  id="pic" required>
+            <input type="file" name="pic"  id="pic" >
         </div>
         <br>
         <div>
@@ -54,6 +54,13 @@
                 <span>*</span>
             </label>
             <input type="number" name="count"  id="count" value = "<?php print $row['count'];?>" required>
+        </div>
+        <br>
+        <div>
+            <label for="price">فیمت:
+                <span>*</span>
+            </label>
+            <input type="number" name="price"  value="<?php print $row['price']?>" id="price"  required>
         </div>
         <br>
         <div>

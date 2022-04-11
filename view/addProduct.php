@@ -57,6 +57,13 @@
             </div>
             <br>
             <div>
+                <label for="price">فیمت:
+                    <span>*</span>
+                </label>
+                <input type="number" name="price"  id="price"  required>
+            </div>
+            <br>
+            <div>
                 <lable for = "des">
                     توضیحات:<span>*</span>
                 </lable>

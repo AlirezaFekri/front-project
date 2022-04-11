@@ -11,6 +11,7 @@ if (isset($_POST['submit'])){
     $count = $_POST['count'];
     $category = $_POST['cat'];
     $brand = $_POST['brand'];
+    $price = $_POST['price'];
     $dirSave = "../assets/images/";
     $file = $dirSave;
 
@@ -23,10 +24,11 @@ if (isset($_POST['submit'])){
                 count = ?,
                    pic_address =?,
                 category = ?,
-                brand = ? 
+                brand = ?,
+                price =?    
         where id = ?";
 
-        $result = $connectDB->query($qu, $name, $des, $count,$file ,$category, $brand, $id);
+        $result = $connectDB->query($qu, $name, $des, $count,$file ,$category, $brand,$price, $id);
         if ($result ->affectedRows() > 0){
             echo "باموفقیت بروز رسانی شد";
         }
@@ -36,10 +38,11 @@ if (isset($_POST['submit'])){
                 description= ?,
                 count = ?,
                 category = ?,
-                brand = ? 
-        where id = ?";
+                brand = ?,
+                price =?    
+                where id = ?";
 
-        $result = $connectDB->query($qu, $name, $des, $count,$category, $brand, $id);
+        $result = $connectDB->query($qu, $name, $des, $count,$category, $brand,$price, $id);
         if ($result ->affectedRows() > 0){
             echo "باموفقیت بروز رسانی شد";
         }
