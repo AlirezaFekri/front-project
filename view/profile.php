@@ -19,13 +19,18 @@
             </span>
         </div>
         <div class="inline ">
-            <a href=<?php echo "personalEdit.php?phone_number={$phoneNumber}"?>>
+            <a href=<?php echo "personalEdit.php"?>>
                 <i class="fa-solid fa-pen-to-square link">  ویرایش</i>
             </a>
         </div>
         <div>
-            <a href=<?php echo "ticket.php?phone_number={$phoneNumber}"?>>
+            <a href=<?php echo "ticket.php"?>>
                 <i class="fa-solid fa-ticket">  ارسال تیکت</i>
+            </a>
+        </div>
+        <div>
+            <a href=<?php echo "login.php"?>>
+                <i class="fa-solid fa-arrow-right-from-bracket"> خروج</i>
             </a>
         </div>
 

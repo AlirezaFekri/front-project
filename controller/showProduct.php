@@ -8,7 +8,8 @@ $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName, $dbCharset);
 $qu = "select * from products";
 //execute query
 $result = $connectDB -> query($qu);
-
+$products = $result->fetchAll();
+$connectDB ->close();
 
 
 include "../view/showProducts.php";

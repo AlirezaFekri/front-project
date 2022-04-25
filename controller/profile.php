@@ -1,11 +1,12 @@
 <?php
 include "dbConnect.php";
 include"../library/db.php";
+include "../utils/security.php";
 
 //get user id
-$phoneNumber = $_GET['phone_number'];
+$phoneNumber = Authentication::id();
 
-if (isset($phoneNumber)){
+if (Authentication::check()){
     //connection
     $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
 

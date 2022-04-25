@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://kit.fontawesome.com/355b79ec86.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/7s2t5gm60bjkqdwd59bxof77zg6fiwdhh4y0t1palohu6jny/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#editor',
+            plugins: 'directionality image',
+            language: 'fa'
+        });
+    </script>
+
     <title>افزودن کالا</title>
 </head>
 <body>
@@ -67,7 +76,7 @@
                 <lable for = "des">
                     توضیحات:<span>*</span>
                 </lable>
-                <textarea name="description" id="des" ></textarea>
+                <textarea name="description" id="editor" ></textarea>
             </div>
             <br>
             <div>

@@ -1,0 +1,19 @@
+.card{
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card.outlined{
+    border: 1px solid black;
+}
+.card.filled{
+    background-color: #04AA6D ;
+}
+.card-title{
+
+}
+.card-body{
+    padding: 16px;
+}
+.card-img-top{
+    width: 100%;
+}

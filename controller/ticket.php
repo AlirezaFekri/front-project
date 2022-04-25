@@ -1,9 +1,10 @@
 <?php
 include "dbConnect.php";
 include "../library/db.php";
+include "../utils/security.php";
 
 //get id user
-$id = $_GET['phone_number'];
+$id = $_SESSION['id'];
 
 //validation login
 if (isset($id)){
@@ -34,5 +35,5 @@ if (isset($id)){
         include "../view/ticket.php";
     }
 }else{
-    header("location:login.php");
+    header("location:login.php?redirect=ticket.php");
 }

@@ -1,11 +1,12 @@
 <?php
 include "dbConnect.php";
 include"../library/db.php";
+include "../utils/security.php";
 //get username of user
-$user = $_GET['phone_number'];
+$user = Authentication::check();
 
 //form validate
-if (isset($user)) {
+if ($user) {
 
 
     //DataBase connect
@@ -24,7 +25,7 @@ if (isset($user)) {
                     pass = ?, 
                     phone_number = ?,
                     email = ?,
-                    address = ?,
+                    address = ?
             where phone_number = ?";
 
             //execute query
@@ -39,7 +40,7 @@ if (isset($user)) {
             $qu = "UPDATE users SET fullname = ?,
                     phone_number = ?,
                     email = ?,
-                    address = ?,
+                    address = ?
             where phone_number = ?";
 
             //execute query
@@ -74,6 +75,6 @@ if (isset($user)) {
     include "../view/personalEdit.php";
 }
 }else {
-    header("location:login.php");
+    header("location:login.php?redirect=personalEdit.php");
 }
 

@@ -1,6 +1,7 @@
 <?php
 include "dbConnect.php";
 include"../library/db.php";
+
 $id = $_GET['id'];
 
 if (isset($_POST['submit'])){
@@ -56,7 +57,7 @@ if (isset($_POST['submit'])){
     $result = $connectDB->query($qu,$id);
 
 
-    $row = $result->fetchArray();
+    $row = $connectDB->fetchArray();
 
 //close connection
     $connectDB->close();

@@ -132,7 +132,7 @@
     background-color: var(--md-sys-color-primary);
 }
 
-.material-theme {
+:root {
     --md-sys-typescale-display1-font: Roboto;
     --md-sys-typescale-display1-weight: Regular;
     --md-sys-typescale-display1-size: 64px;

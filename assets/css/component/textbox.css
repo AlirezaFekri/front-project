@@ -1,0 +1,21 @@
+
+input:not( [type="submit"], [type="checkbox"], [type="radio"]),textarea{
+   width:      50%;
+}
+.form-control{
+    border: 1px solid black;
+    font-size: 24px;
+    padding-top: 0;
+    /*width: 100px;*/
+
+}
+.form-control input{
+    border:none;
+    padding-bottom: 25px;
+    margin-top: -0px;
+    background-color: #04AA6D;
+}
+.form-control i{
+    margin: 0 -4px 0 8px;
+    display: inline-block;
+}
