@@ -2,8 +2,7 @@
 include"dbConnect.php";
 include "../library/db.php";
 include "../utils/security.php";
-
-if (isset($_SESSION['id'])) {
+if (Authorization::checkRole()) {
 
     if (isset($_POST['submit'])) {
 
@@ -31,5 +30,5 @@ if (isset($_SESSION['id'])) {
         include "../view/addProduct.php";
     }
 }else{
-    header("location:login.php?redirect=addProduct.php");
+    header("location:login.php");
 }
