@@ -49,5 +49,7 @@ if (Authorization::checkRole()) {
     } else {
         include "../view/registerAdmin.php";
     }
+}else{
+    header("location:login.php");
 }
 ?>
