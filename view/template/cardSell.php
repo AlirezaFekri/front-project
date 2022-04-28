@@ -4,8 +4,8 @@
         <h3 class="card-title"> <?php echo $row['name']; ?> </h3>
         <p> <?php echo $row['price']; ?> </p>
         <div>
-            <a href="updateProduct.php?id=<?php echo $row['id']; ?> " class="btn primary">
-                <i class="fa-solid fa-pen-to-square">ویرایش</i>
+            <a href="#" class="btn primary">
+                <i class="fa-solid fa-pen-to-square">افزودن به سبد خرید</i>
             </a>
         </div>
     </div>

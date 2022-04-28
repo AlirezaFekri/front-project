@@ -1,7 +1,7 @@
 <?php
 include"dbConnect.php";
 include "../library/db.php";
-include "../utils/security.php";
+
 
 $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName, $dbCharset);
 
@@ -11,8 +11,6 @@ $qu = "select * from products";
 $result = $connectDB -> query($qu);
 $products = $result->fetchAll();
 $connectDB ->close();
-if (Authorization::checkRole()) {
-    include "../view/showProducts.php";
-}else {
-    header("location:login.php");
-}
+
+    include "../view/itemSell.php";
+

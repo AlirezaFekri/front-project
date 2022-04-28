@@ -4,11 +4,9 @@ include"../library/db.php";
 include "../utils/security.php";
 //get username of user
 $user = Authentication::check();
-
+$id = Authentication::id();
 //form validate
 if ($user) {
-
-
     //DataBase connect
     $connectDB = new DB($dbHost, $dbUser, $dbPassword, $dbName, $dbCharset);
     if (isset($_POST['submit'])){
@@ -64,11 +62,10 @@ if ($user) {
     $qu = "select * from users where phone_number =?";
 
     //execute query
-    $result = $connectDB->query($qu,$user);
+    $result = $connectDB->query($qu,$id);
 
 
-    $row = $result->fetchArray();
-
+    $row = $connectDB ->fetchArray();
     //close connection
     $connectDB->close();
 

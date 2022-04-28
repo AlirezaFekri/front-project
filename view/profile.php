@@ -29,7 +29,7 @@
             </a>
         </div>
         <div>
-            <a href=<?php echo "login.php"?>>
+            <a href=<?php echo "login.php?redirect=logout"?>>
                 <i class="fa-solid fa-arrow-right-from-bracket"> خروج</i>
             </a>
         </div>

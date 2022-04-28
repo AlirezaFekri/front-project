@@ -11,36 +11,23 @@
 </head>
 <body>
 <h1>نمایش اطلاعات کاربران</h1>
-<table class="table" >
-    <tr class="th">
-        <td>شماره تلفن</td>
-        <td>نام و نام خانوادگی</td>
-        <td>ایمیل</td>
-        <td>رمز عبور</td>
-        <td>نشانی</td>
-        <td>نقش</td>
-        <td>ویرایش</td>
-    </tr>
+<table class="datatable" >
+    <thead>
+        <tr>
+            <th>شماره تلفن</th>
+            <th>نام و نام خانوادگی</th>
+            <th>ایمیل</th>
+            <th>نشانی</th>
+            <th>نقش</th>
+            <th>ویرایش</th>
+        </tr>
+    </thead>
+    <tbody>
         <?php
-       $rows = $result->fetchAll();
-
-
-          foreach ($rows as $key => $v) {
-              print "
-            <tr class='tr'>
-                <td>{$v ['phone_number']}</td>
-                <td>{$v['fullname']}</td>
-                <td>{$v['email']}</td>
-                <td>{$v['pass']}</td>
-               <td>{$v['address']}</td>
-                <td>{$v['role_member']}</td>
-                
-                <td><a href='update.php?phone_number={$v['phone_number']}'>ویرایش</a></td>
-            </tr>
-        ";
-}
-
-       echo "</table>";
+        foreach ($rows as $v) {
+            include "template/user-row.php";
+        }
+       echo " </tbody></table>";
         ?>
 
 

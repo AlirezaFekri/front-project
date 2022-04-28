@@ -12,18 +12,20 @@ class Authentication{
     }
     static function logout(){
         unset($_SESSION['id']);
+        unset($_SESSION['role']);
     }
 
 }
 class Authorization{
-    static function checkRole($role){
-        if (!Authentication::check()){
-            return false;
-        }else if ($role == "role"){
-
-                return true;
-
-        }
-
+    static function getRole($role){
+            $_SESSION['role'] = $role;
+    }
+    static function checkRole(){
+       if ($_SESSION['role'] == "admin"){
+           return true;
+       }
+       else{
+           return false;
+       }
     }
 }
