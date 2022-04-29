@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>کالا ها</h1>
-<div class="grid grid-med-3 grid-large-4 ">
+<div class="grid grid-med-2 grid-large-4 ">
     <?php
     foreach ($products as  $row) {
         include "template/cardSell.php";
