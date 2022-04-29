@@ -1,10 +1,21 @@
-
-label{
-    display: inline-block;
-    width:  9em;
-    margin: 0 1em;
-    text-align: left;
+:root{
+    --on-surface-label: rgba(0,0,0, 0.6);
 }
-.lbl{
-    width: auto;
+
+.label-outlined{
+    font-size: 16px;
+    color: var(--on-surface-label);
+}
+.help{
+    margin: 0;
+    padding-left: 16px;
+    font-size: 14px;
+    color: var(--on-surface-label);
+}
+#lock{
+    padding-left: 16px;
+}
+.right{
+    padding-right: 12px;
+    cursor: pointer;
 }

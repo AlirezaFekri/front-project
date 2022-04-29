@@ -13,6 +13,7 @@ class Authentication{
     static function logout(){
         unset($_SESSION['id']);
         unset($_SESSION['role']);
+        unset($_SESSION['redirect']);
     }
 
 }
@@ -27,5 +28,21 @@ class Authorization{
        else{
            return false;
        }
+    }
+}
+class Redirect{
+    static function getDIR($dir){
+        $_SESSION['redirect'] = $dir;
+    }
+    static function DIR(){
+        return $_SESSION['redirect'];
+    }
+    static function checkDIR(){
+        if (isset($_SESSION['redirect'])){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

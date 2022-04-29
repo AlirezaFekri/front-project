@@ -14,22 +14,18 @@
 
         <div class="container">
             <div>
-                <label for="uname">شماره تلفن</label>
-                <div class="form-control">
-<!--                    <i class="fa-solid fa-user"></i>-->
-                    <input type="text" id="uname" placeholder="شماره تلفن را وارد کنید" name="uname" required>
-                </div>
-                <div class="assistive-text">
-
+                <label for="uname" class="label-outlined">شماره تلفن</label>
+                <div class="text-outlined">
+                    <i class="fa-solid fa-user right" ></i>
+                    <input class="text" type="text" id="uname" placeholder="شماره تلفن را وارد کنید" name="uname" required>
                 </div>
             </div>
             <br>
             <div>
-                <label for="psw">رمز عبور</label>
-                <div class="form-control">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="psw" placeholder="رمز عبور وارد کنید" name="psw" required>
-                    <i class="fa-solid fa-eye"></i>
+                <label class="label-outlined" for="psw">رمز عبور</label>
+                <div class="text-outlined">
+                    <input  class="text" type="password" id="psw" placeholder="رمز عبور وارد کنید" name="psw" required>
+                    <i id="togglePassword" class="fa-solid fa-eye" id="lock"></i>
                 </div>
             </div>
             <br>
@@ -43,5 +39,8 @@
         </div>
 
     </form>
+    <script src="../assets/js/index.js">
+
+    </script>
 </body>
 </html>

@@ -30,7 +30,7 @@
         </div>
         <div>
             <button class="btn text">
-            <a href=<?php echo "login.php?redirect=logout"?>>
+            <a href=<?php Redirect::getDIR("profile.php"); echo "login.php"?>>
                 <i class="fa-solid fa-arrow-right-from-bracket"> خروج</i>
             </a>
             </button>

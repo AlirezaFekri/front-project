@@ -4,7 +4,7 @@ include"../library/db.php";
 include "../utils/security.php";
 $status = Authentication::check();
 
-if (isset($_GET['redirect']) && $_GET['redirect'] == "logout") {
+if (Redirect::checkDIR()) {
     Authentication::logout();
 }else if ($status) {
 
