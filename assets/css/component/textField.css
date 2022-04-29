@@ -1,0 +1,29 @@
+:root{
+    --on-surface-border: rgba(0,0,0, .12);
+    --on-surface-text: rgba(0,0,0, .87);
+}
+*{  
+    box-sizing: border-box;
+}
+.input-text{
+    border: none;
+    outline: none;
+    width: 13px;
+    padding: 12px 8px 14px 8px;
+    width: 228px;
+    color: var(--on-surface-text);
+}
+
+.text-outlined{
+    border-radius: 4px;
+    border: 1px solid var(--on-surface-border);
+    overflow: hidden;
+    width: max-content;
+}
+.text-outlined i{ 
+    font-size: 24px;
+    vertical-align: middle;
+    display: inline;
+
+}
+
