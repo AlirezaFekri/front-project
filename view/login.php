@@ -17,14 +17,14 @@
                 <label for="uname" class="label-outlined">شماره تلفن</label>
                 <div class="text-outlined">
                     <i class="fa-solid fa-user right" ></i>
-                    <input class="text" type="text" id="uname" placeholder="شماره تلفن را وارد کنید" name="uname" required>
+                    <input class="input-text" type="text" id="uname" placeholder="شماره تلفن را وارد کنید" name="uname" required>
                 </div>
             </div>
             <br>
             <div>
                 <label class="label-outlined" for="psw">رمز عبور</label>
                 <div class="text-outlined">
-                    <input  class="text" type="password" id="psw" placeholder="رمز عبور وارد کنید" name="psw" required>
+                    <input  class="input-text" type="password" id="psw" placeholder="رمز عبور وارد کنید" name="psw" required>
                     <i id="togglePassword" class="fa-solid fa-eye" id="lock"></i>
                 </div>
             </div>
