@@ -49,7 +49,7 @@
             </div>
 
             <div>
-                <button class="btn primary" type="submit" name="submit">
+                <button class="btn filled" type="submit" name="submit">
                     ارسال
                 </button>
             </div>

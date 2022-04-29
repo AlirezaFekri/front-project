@@ -2,11 +2,13 @@
     <img class="card-img-top" src="<?php echo $row['pic_address'];?>" alt="">
     <div class="card-body">
         <h3 class="card-title"> <?php echo $row['name']; ?> </h3>
-        <p> <?php echo $row['price']; ?> </p>
+         <?php echo number_format($row['price']); ?>
         <div>
-            <a href="#" class="btn primary">
+            <button class="btn outlined">
+            <a href="#" >
                 <i class="fa-solid fa-pen-to-square">افزودن به سبد خرید</i>
             </a>
+            </button>
         </div>
     </div>
 </article>

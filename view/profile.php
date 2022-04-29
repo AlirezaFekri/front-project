@@ -29,9 +29,11 @@
             </a>
         </div>
         <div>
+            <button class="btn text">
             <a href=<?php echo "login.php?redirect=logout"?>>
                 <i class="fa-solid fa-arrow-right-from-bracket"> خروج</i>
             </a>
+            </button>
         </div>
 
     </div>

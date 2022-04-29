@@ -3,16 +3,21 @@
     gap: 8px;
     grid-template-columns: auto;
 }
-.grid-2{
-    grid-template-columns: auto auto;
+@media screen and (min-width:1025px){
+    .grid-med-2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-med-3{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-.grid-3{
-    grid-template-columns: auto auto auto;
+@media screen and (min-width:1025px){
+    .grid-large-4{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid-large-6{
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
-.grid-4{
-    grid-template-columns: auto auto auto auto;
-}
-.grid-6{
-    grid-template-columns: auto auto auto auto auto auto;
-}
+
 

@@ -2,9 +2,11 @@
 @import url("main.css");
 @import url("them.css");
 @import url("component/component.css");
-
 @import url("table.css");
 @import url("layout/layout.css");
 img{
     max-width: 100%;
+}
+body{
+    background-color: var(--md-sys-color-background-light);
 }

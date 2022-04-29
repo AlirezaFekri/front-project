@@ -46,7 +46,7 @@
         </div>
         <br>
         <div>
-            <button  type="submit" name="submit">ارسال</button>
+            <button class="btn filled" type="submit" name="submit">ارسال</button>
         </div>
 
 

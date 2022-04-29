@@ -34,7 +34,7 @@
                      <label for="fast">درخواست فوری </label>
 
                  </div>
-                <button type="submit" class="btn primary" name ="submit">
+                <button type="submit" class="btn filled" name ="submit">
 
                     ارسال
                     <i class="fa-solid fa-paper-plane"></i>

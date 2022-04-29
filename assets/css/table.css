@@ -8,7 +8,7 @@
     height: 56px;
 }
 .datatable tbody tr{
-    height: 54px;
+    height: 52px;
     border-top: 1px solid;
     font-size: 1.2em;
     text-align: center;
@@ -21,5 +21,17 @@
     text-align: center;
 }
 .datatable tbody td{
-    padding: 10px;
+    padding-right: 16px;
+    max-width: fit-content;
+    text-align: right;
+}
+.datatable tbody td:nth-child(3):not(tr:nth-child(1)){
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:visited{
+    color: inherit;
 }

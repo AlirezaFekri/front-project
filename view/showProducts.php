@@ -6,18 +6,31 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="https://kit.fontawesome.com/355b79ec86.js" crossorigin="anonymous"></script>
-    <title>نمایش کالا </title>
+    <link rel="stylesheet" href="../assets/css/table.css">
+    <title>show Users</title>
 </head>
 <body>
-<h1>کالا ها</h1>
-<div class="grid grid-4">
+<h1>نمایش اطلاعات کاربران</h1>
+<table class="datatable" >
+    <thead>
+    <tr>
+        <th>نام کالا</th>
+        <th>توضیحات</th>
+        <th>تعداد</th>
+        <th>دسته</th>
+        <th>برند</th>
+        <th>قیمت</th>
+        <th>ویرایش</th>
+    </tr>
+    </thead>
+    <tbody>
     <?php
-        foreach ($products as  $row) {
-            include "template/card.php";
-        }
+    foreach ($products as $v) {
+        include "template/product-row.php";
+    }
+    echo " </tbody></table>";
     ?>
-</div>
+
 
 </body>
 </html>

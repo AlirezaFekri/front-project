@@ -71,7 +71,7 @@
         </div>
         <br>
         <div>
-            <button  type="submit" name="submit">
+            <button class="btn filled" type="submit" name="submit">
                 <i class="fa-solid fa-edit"></i>
                 ویرایش
 

@@ -47,7 +47,7 @@
             <label for="seller" class="lbl">فروشنده</label>
         </div>
         <div>
-            <button  type="submit" class="btn primary" name="submit">ارسال</button>
+            <button  type="submit" class="btn filled" name="submit">ارسال</button>
         </div>
 
 
