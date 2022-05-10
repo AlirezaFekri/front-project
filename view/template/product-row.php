@@ -35,7 +35,20 @@
     }
 
     ?>
+
     <td><?php echo number_format($v['price']); ?></td>
+
+        <?php
+            switch ($v['status']){
+                case "Active":
+                    echo "<td>فعال</td>";
+                    break;
+                case "Deactive":
+                    echo "<td>غیر فعال</td>";
+                    break;
+            }
+        ?>
+
     <td>
         <button class="btn text">
             <a href="updateProduct.php?id=<?php echo $v['id']; ?>">ویرایش</a>

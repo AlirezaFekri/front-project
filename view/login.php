@@ -25,7 +25,7 @@
                 <label class="label-outlined" for="psw">رمز عبور</label>
                 <div class="text-outlined">
                     <input  class="input-text" type="password" id="psw" placeholder="رمز عبور وارد کنید" name="psw" required>
-                    <i id="togglePassword" class="fa-solid fa-eye" id="lock"></i>
+                    <i id="togglePassword" class="fa-solid fa-eye-slash" id="lock"></i>
                 </div>
             </div>
             <br>

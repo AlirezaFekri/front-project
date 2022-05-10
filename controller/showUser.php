@@ -12,6 +12,9 @@ include "../utils/security.php";
     $result = $connectDB -> query($qu);
     $rows = $connectDB->fetchAll();
 
+if (!Authentication::check()){
+    Redirect::getDIR("showUser.php");
+}
 if (Authorization::checkRole()) {
     include "../view/showUser.php";
 }

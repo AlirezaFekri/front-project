@@ -4,14 +4,10 @@ include"../library/db.php";
 include "../utils/security.php";
 $status = Authentication::check();
 
-if (Redirect::checkDIR()) {
+
+if (!$status) {
     Authentication::logout();
-}else if ($status) {
-
-        header("location:itemSell.php");
-
-}
-//DataBase connect
+    //DataBase connect
     $connectDB = new DB($dbHost, $dbUser, $dbPassword, $dbName, $dbCharset);
 
     if (isset($_POST['submit'])) {
@@ -31,8 +27,9 @@ if (Redirect::checkDIR()) {
             $id = $user['phone_number'];
             Authentication::login($id);
             Authorization::getRole($user['role_member']);
-            if (isset($redirect)) {
-                header("location:{$redirect}");
+            if (Redirect::checkDIR()) {
+                $redirect = Redirect::DIR();
+                header("location: $redirect");
             } else {
                 header("location: profile.php");
             }
@@ -46,4 +43,8 @@ if (Redirect::checkDIR()) {
     } else {
         include "../view/login.php";
     }
+
+}else{
+    header("location:itemSell.php");
+}
 

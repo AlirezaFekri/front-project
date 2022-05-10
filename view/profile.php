@@ -30,12 +30,13 @@
         </div>
         <div>
             <button class="btn text">
-            <a href=<?php Redirect::getDIR("profile.php"); echo "login.php"?>>
+            <a  id="logout">
                 <i class="fa-solid fa-arrow-right-from-bracket"> خروج</i>
             </a>
             </button>
         </div>
 
     </div>
+    <script src="../assets/js/auth/logout.js"></script>
 </body>
 </html>

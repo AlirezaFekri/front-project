@@ -8,9 +8,9 @@ if (Authorization::checkRole()) {
     if (isset($_GET['delete'])){
         $delete = $_GET['delete'];
         $connectDB = new DB($dbHost, $dbUser, $dbPassword, $dbName, $dbCharset);
-        $qu = "delete from products where id =?";
+        $qu = "update products set status = ?  where id =?";
         //execute query
-        $result = $connectDB->query($qu, $delete);
+        $result = $connectDB->query($qu, "Deactive",$delete);
         if ($connectDB->affectedRows() > 0 ){
             header("location:showProduct.php");
         }

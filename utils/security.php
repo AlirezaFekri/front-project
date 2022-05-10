@@ -5,7 +5,10 @@ class Authentication{
         $_SESSION['id'] = $id;
     }
     static function check(){
-        return isset($_SESSION['id']);
+        if (isset($_SESSION['id']))
+        return true;
+        else
+            return false;
     }
     static function id(){
         return $_SESSION['id'];

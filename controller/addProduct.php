@@ -19,9 +19,9 @@ if (Authorization::checkRole()) {
 
         //DataBase connect
         $connectDB = new DB($dbHost, $dbUser, $dbPassword, $dbName, $dbCharset);
-        $qu = "insert into products (name, description, count , pic_address, category, brand,price) values(?,?,?,?,?,?,?)";
+        $qu = "insert into products (name, description, count , pic_address, category, brand,price, status) values(?,?,?,?,?,?,?,?)";
 
-        $result = $connectDB->query($qu, $name, $des, $count, $file, $category, $brand, $price);
+        $result = $connectDB->query($qu, $name, $des, $count, $file, $category, $brand, $price, "Active");
         if ($result->affectedRows() > 0) {
             echo "محصول با موفقیت اضافه شد.";
         }
