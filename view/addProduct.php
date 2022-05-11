@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/addProduct.css">
+
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://kit.fontawesome.com/355b79ec86.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tiny.cloud/1/7s2t5gm60bjkqdwd59bxof77zg6fiwdhh4y0t1palohu6jny/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
@@ -19,23 +21,29 @@
     <title>افزودن کالا</title>
 </head>
 <body>
+
     <div class="content-center">
         <form action="" method="post" enctype="multipart/form-data">
             <h1>افزودن محصول جدید</h1>
-            <div>
+
+            <div class="div-body-matn">
                 <label for="name">نام کالا:
                     <span>*</span>
                 </label>
                 <input type="text" name="name" id="name" required>
             </div>
+
             <br>
+
             <div>
                 <label for="pic">تصویر کالا:
                     <span>*</span>
                 </label>
                 <input type="file" name="pic"  id="pic" required>
             </div>
+
             <br>
+
             <div>
                 <label for="brand">برند:
                     <span>*</span>
@@ -46,6 +54,7 @@
                     <option value="Apple">Apple</option>
                 </select>
             </div>
+
             <div>
                 <label for="cat">دسته بندی:
                     <span>*</span>
