@@ -5,7 +5,9 @@ include "../utils/security.php";
 $status = Authentication::check();
 
 
-if (!$status) {
+if ($status) {
+    header("location:itemSell.php");
+} else{
     Authentication::logout();
     //DataBase connect
     $connectDB = new DB($dbHost, $dbUser, $dbPassword, $dbName, $dbCharset);
@@ -44,7 +46,5 @@ if (!$status) {
         include "../view/login.php";
     }
 
-}else{
-    header("location:itemSell.php");
 }
 
