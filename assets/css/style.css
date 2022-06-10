@@ -4,6 +4,14 @@
 @import url("component/component.css");
 @import url("table.css");
 @import url("layout/layout.css");
+#like{
+    font-size: 30px;
+    color: red;
+}
+.like{
+    text-align: left;
+
+}
 img{
     max-width: 100%;
 }

@@ -1,5 +1,5 @@
 
-<tr class='tr'>
+<tr class='tr' id="delete<?php echo $v ['phone_number']; ?>">
     <td><?php echo $v ['phone_number']; ?></td>
     <td><?php echo $v['fullname']; ?></td>
     <td><?php echo $v['email']; ?></td>
@@ -19,8 +19,8 @@
     ?>
 
     <td>
-        <button class="btn text">
-            <a href='update.php?phone_number=<?php echo $v['phone_number']; ?>'>ويرايش</a>
+        <button onclick="deleteAjax(<?php echo $v ['phone_number']; ?>)" class="btn text">
+            <a >ويرايش</a>
         </button>
     </td>
 </tr>

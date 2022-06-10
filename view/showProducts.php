@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/table.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>show Users</title>
 </head>
 <body>
@@ -33,5 +35,8 @@
     ?>
 
 
+    <script type="text/javascript" src="../assets/js/status.js">
+
+    </script>
 </body>
 </html>

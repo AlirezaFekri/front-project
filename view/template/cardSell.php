@@ -7,8 +7,14 @@
             <button class="btn outlined">
             <a href="#" >
                 <i class="fa-solid fa-pen-to-square">افزودن به سبد خرید</i>
-            </a>
+            </a> 
             </button>
+            <button class="btn text">
+                <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                </div> 
+            </button>
+             
         </div>
     </div>
 </article>

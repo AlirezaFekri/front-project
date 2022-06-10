@@ -11,7 +11,6 @@ $qu = "select * from products";
 $result = $connectDB -> query($qu);
 $products = $result->fetchAll();
 $connectDB ->close();
-
     include "../view/showProducts.php";
 }else {
     header("location:login.php");

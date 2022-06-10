@@ -38,7 +38,7 @@
                 <label for="phoneNumber" required > شماره تلفن:
                     <span>*</span
                     ></label>
-                <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="11">
+                <input type="text" name="phoneNumber" id="phoneNumber" maxlength="11">
             </div>
             <br>
             <div>

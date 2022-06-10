@@ -41,10 +41,10 @@
         <?php
             switch ($v['status']){
                 case "Active":
-                    echo "<td>فعال</td>";
+                    echo "<td id='productStatus{$v['id']}'>فعال</td>";
                     break;
                 case "Deactive":
-                    echo "<td>غیر فعال</td>";
+                    echo "<td id='productStatus{$v['id']}'>غیر فعال</td>";
                     break;
             }
         ?>
@@ -53,10 +53,23 @@
         <button class="btn text">
             <a href="updateProduct.php?id=<?php echo $v['id']; ?>">ویرایش</a>
         </button>
-        /
-        <button class="btn text">
-            <a href="updateProduct.php?delete=<?php echo $v['id']; ?>">حذف</a>
-        </button>
+        <?php
+            if ($v['status'] == "Active"){
+                echo "
+                    <button id='btnStatus' onclick='deleteData({$v['id']});' class='btn text'>
+                         غیرفعال  
+                    </button>
+                ";
+            }
+            else{
+                echo "
+                    <button id='btnStatus' onclick='activeData({$v['id']});' class='btn text'>
+                         فعال  
+                    </button>
+                ";
+            }
+        ?>
+
     </td>
 
 </tr>
