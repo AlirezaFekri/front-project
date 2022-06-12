@@ -1,6 +1,6 @@
 <?php
 include "dbConnect.php";
-include"../library/db.php";
+include "../library/db.php";
 
 if (isset($_POST['submit'])) {
 
@@ -8,28 +8,26 @@ if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $password = $_POST['password'];
         $phoneNumber = $_POST['phoneNumber'];
-
+        $role = "buyer";
         //DataBase connect
         $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName,$dbCharset);
-
         //Query
-        $qu = "INSERT INTO users(fullname,pass,phone_number) VALUES (?,?,?)";
+        $qu = "INSERT INTO users(fullname,pass,phone_number,role_member ) VALUES(?,?,?,?)";
         $qu2 = "select * from users where phone_number = ?";
 
         //execute query
-        $resul = $connectDB -> query($qu2, $phoneNumber);
-        
-
+        $connectDB -> query($qu2, $phoneNumber);
         //data validation
-        if ($resul ->numRows() == 1){
+        if ($connectDB ->numRows() > 0){
             echo "شماره تلفن از قبل ثبت نام شده است. <a href='login.php'>وارد شوید</a>";
             $connectDB ->close();
         }
         else{
-            $result = $connectDB->query($qu, $name, $password,$phoneNumber);
-            $connectDB ->close();
-            if ($result){
+            $connectDB->query($qu, $name, $password, $phoneNumber,$role);
+           
+            if ($connectDB -> affectedRows() > 0){
                 echo "کاربر با موفقیت ایجاد شد";
+                $connectDB ->close();
                 }
         }
 
