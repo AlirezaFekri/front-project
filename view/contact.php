@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,37 +11,42 @@
 
     <title>تماس با ما</title>
 </head>
+
 <body>
-    <div class="content-center">
+    <div class="form">
         <h1>تماس با ما</h1>
-             <form method = "post">
-                <div c>
-                    <label for="title"> عنوان: </label>
-                    <input type="text" name="title" id="title">
-                </div>
+        <form method="post">
+            <div c>
+                <label for="title">عنوان</label> <br>
 
-                <div>
-                    <label for="description">متن پیام: </label>
-                    <textarea name="description" id="description"></textarea>
-                </div>
+                <input type="text" name="title" id="title">
+            </div>
+            <br>
+            <div>
+                <label for="email">ایمیل</label><br>
+                <input type="email" name="email" id="email">
+            </div>
+            <br>
 
-                <div>
-                    <label for="email">ایمیل: </label>
-                    <input type="email" name="email" id="email">
-                </div>
+            <div>
+                <label for="description">متن پیام</label><br>
+                <textarea name="description" id="description" class="txtArea"></textarea>
+            </div>
+            <br>
 
-                 <div>
-                     <input type="checkbox" name="fast" id="fast">
-                     <label for="fast">درخواست فوری </label>
+            <div>
+                <input type="checkbox" name="fast" id="fast">
+                <label for="fast">درخواست فوری</label>
+            </div>
+            <br>
+            <button type="submit" class="btn-primary" name="submit">
 
-                 </div>
-                <button type="submit" class="btn filled" name ="submit">
+                ارسال
+                <i class="fa-solid fa-paper-plane"></i>
 
-                    ارسال
-                    <i class="fa-solid fa-paper-plane"></i>
-
-                </button>
-             </form>
+            </button>
+        </form>
     </div>
 </body>
+
 </html>

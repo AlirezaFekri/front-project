@@ -1,7 +1,11 @@
 <?php
-include"dbConnect.php";
+include "dbConnect.php";
 include "../library/db.php";
-
+include "../utils/security.php";
+$userName="";
+if ( Authentication::check()) {
+    $userName = Authentication::id();
+}
 
 $connectDB = new DB($dbHost, $dbUser, $dbPassword,$dbName, $dbCharset);
 

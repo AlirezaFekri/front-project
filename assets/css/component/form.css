@@ -1,0 +1,10 @@
+.form {
+  padding: 30px;
+  margin: 40px auto 40px auto;
+  border-radius: 10px;
+  background-color: #392f37;
+  color: white;
+  width: 300px;
+  height: auto;
+  text-align: center;
+}

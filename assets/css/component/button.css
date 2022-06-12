@@ -1,200 +1,62 @@
-@import url('../them.css');
-
-.btn{
-    --height: 40px;
-    height: var(--height);
-    line-height: 20px;
-    margin-top: 2%;
-    border-radius: calc(var(--height) / 2);
-    padding: 0 24px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: .1em;
-    color: white;
+.btn-primary {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
-:root{
-    --opacity-disabled: rgba(255,255,255, .88);
-    --opacity-hoverd : rgba(255,255,255 ,.08);
-    --opacity-focus-active: rgba(255,255,255,.12);
-    --opacity-fucus-activ-outex : rgba(255,255,255, .92);
+.btn-primary {
+  background-color: var(--p1);
+  color: var(--n6);
+  padding: 10px;
+  border-radius: 17px;
+  font-weight: bold;
 }
-
-.btn{
-    --height : 40px;
-    /* استفاده به جای roboto medium */
-    font-family: Roboto, sans-serif;
-    line-height: var(--height)/2;
-    font-size: 14px;
-    letter-spacing: .1em;
-    font-weight: 500;
-    height: var(--height);
-    border-radius: calc(var(--height)/2);
-    padding: 0 24px;
-    text-align: center;
-    margin: 8px 0 16px 0;
-    display: inline-block;
-    align-items: normal;
-    text-decoration: none;
-    cursor: pointer;
+.btn-primary:hover {
+  background-color: var(--p3);
+  color: var(--n1);
+  transition: 0.3s;
 }
-
-.btn > *{
-    vertical-align: middle;
+.btn-secondary {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
-
-/* Buttons design */
-.btn.filled{
-    background-color: var(--md-sys-color-primary-light);
-    color: var(--md-sys-color-on-primary-light);
-    border: none;
-
+.btn-secondary {
+  background-color: var(--n1);
+  color: var(--n5);
+  font-family: "Dubai";
+  padding: 10px;
+  border-radius: 17px;
+  font-weight: bold;
 }
-.btn.tonal{
-    background-color: var(--md-sys-color-secondary-container-light);
-    color: var(--md-sys-color-on-secondary-container-light);
-    border: none;
+.btn-secondary:hover {
+  background-color: var(--p1);
+  transition: 0.3s;
 }
-
-.btn.outlined{
-    background-color: var(--md-sys-color-surface-light);
-    border-color: var(--md-sys-color-outline-light);
-    outline-width: 1px;
-    color: var(--md-sys-color-primary-light);
+.btn-like {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
-
-.btn.text{
-    color: var(--md-sys-color-primary-light);
-    padding: 0 12px;
-    border: none;
-    background: none;
+.btn-like {
+  color: var(--n1);
+  font-size: 35px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 3px;
 }
-
-/* disabled buttons */
-.btn:disabled{
-    cursor: default;
-    opacity: 38%;
+.btn-like:hover {
+  color: var(--p1);
+  transition: 0.3s;
 }
-.btn.filled:disabled, .btn.tonal:disabled{
-    background:
-            linear-gradient(
-                    var(--opacity-disabled),
-                    var(--opacity-disabled)),
-            var(--md-sys-color-on-surface-light);
-    color: var(--md-sys-color-on-surface-light);
-}
-.btn.outlined:disabled{
-    outline-color:
-            linear-gradient(
-                    var(--opacity-disabled) ,
-                    var(--opacity-disabled)),
-            var(--md-sys-color-on-surface-light)
-;
-    color: var(--md-sys-color-on-surface-light);
-}
-.btn.text:disabled{
-    color: var(--md-sys-color-on-surface-light);
-}
-
-/* Hover Buttons */
-.btn.filled:enabled:hover{
-    background:
-            linear-gradient(
-                    var(--opacity-hoverd),
-                    var(--opacity-hoverd)
-            )
-            ,var(--md-sys-color-primary-light)
-;
-    color: var(--md-sys-color-on-primary-light);
-}
-.btn.tonal:enabled:hover{
-    background:
-            linear-gradient(
-                    var(--opacity-hoverd),
-                    var(--opacity-hoverd)
-            )
-            ,var(--md-sys-color-secondary-container-light)
-;
-    color: var(--md-sys-color-on-secondary-container-light);
-}
-.btn.outlined:enabled:hover{
-    border-color: var(--md-sys-color-outline-light);
-    background:
-            linear-gradient(
-                    var(--opacity-fucus-activ-outex),
-                    var(--opacity-fucus-activ-outex)),
-            var(--md-sys-color-primary-light)
-;
-    color: var(--md-sys-color-primary-light);
-}
-.btn.text:enabled:hover{
-
-    background:
-            linear-gradient(
-                    var(--opacity-fucus-activ-outex),
-                    var(--opacity-fucus-activ-outex)
-            ),
-            var(--md-sys-color-primary-light);
-    color: var(--md-sys-color-primary-light);
-
-}
-
-/* Focused Buttons &  Pressed(Active) Buttons  */
-.btn.filled:enabled:focus, .btn.filled:enabled:active{
-    background:
-            linear-gradient(
-                    var(--opacity-focus-active),
-                    var(--opacity-focus-active)
-            ), var(--md-sys-color-primary-light)
-;
-    color: var(--md-sys-color-on-primary-light);
-}
-.btn.tonal:enabled:focus, .btn.tonal:enabled:active {
-    background:
-            linear-gradient(
-                    var(--opacity-focus-active),
-                    var(--opacity-focus-active)
-            )
-            ,var(--md-sys-color-secondary-container-light)
-;
-    color: var(--md-sys-color-on-secondary-container-light);
-}
-.btn.outlined:enabled:focus{
-    border-color: var(--md-sys-color-primary-light);
-    background:
-            linear-gradient(
-                    var(--opacity-fucus-activ-outex),
-                    var(--opacity-fucus-activ-outex)),
-            var(--md-sys-color-primary-light)
-;
-    color: var(--md-sys-color-primary-light);
-}
-.btn.outlined:enabled:active{
-    border-color: var(--md-sys-color-outline-light);
-    background: linear-gradient(
-            var(--opacity-disabled),
-            var(--opacity-disabled)),
-    var(--md-sys-color-primary-light)
-;
-    color: var(--md-sys-color-primary-light);
-}
-.btn.text:enabled:focus{
-    background:
-            linear-gradient(
-                    var(--opacity-fucus-activ-outex),
-                    var(--opacity-fucus-activ-outex)
-            ),
-            var(--md-sys-color-primary-light);
-    color: var(--md-sys-color-primary-light);
-}
-.btn.text:enabled:active {
-    background:
-            linear-gradient(
-                    var(--opacity-disabled),
-                    var(--opacity-disabled)
-            ),
-            var(--md-sys-color-primary-light);
-    color:  var(--md-sys-color-primary-light);
-}
-
-

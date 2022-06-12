@@ -28,18 +28,19 @@ if (Authorization::checkRole()) {
         $fieldName = substr($fieldName, 0, strlen($fieldName) - 2);
 
         //Query
-        $qu = "INSERT INTO users($fieldName) VALUES (?,?,?)";
+        $qu = "INSERT INTO users(phone_number, pass, role_member) VALUES (?,?,?)";
         $qu2 = "select * from users where phone_number = ?";
 
         //execute query
         $resul = $connectDB->query($qu2, $phoneNumber);
-        $connectDB->close();
+        
 
         //data validation
         if ($resul->numRows() > 0) {
             echo "شماره تلفن از قبل ثبت نام شده است. <a href='login.php'>وارد شوید</a>";
+            $connectDB->close();
         } else {
-            $result = $connectDB->query($qu, array_values($attr));
+            $result = $connectDB->query($qu, $phoneNumber,$password,$role);
             $connectDB->close();
             if ($result) {
                 echo "کاربر با موفقیت ایجاد شد";

@@ -1,27 +1,20 @@
 <!doctype html>
 <html lang="fa">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="https://cdn.tiny.cloud/1/7s2t5gm60bjkqdwd59bxof77zg6fiwdhh4y0t1palohu6jny/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea#editor',
-            plugins: 'directionality image',
-            language: 'fa'
-        });
-    </script>
     <title>Document</title>
 </head>
+
 <body>
-    <form action="" method="post">
-        <div class="right-side ticket">
+    <div class="form">
+        <form action="" method="post">
             <div class="inline">
                 <label for="name">نام و نام خانوادگی : </label>
-                <input type="text" id="name" value="<?php echo $fullName?>" disabled>
+                <input type="text" id="name" value="<?php echo $fullName ?>" disabled>
             </div>
             <div class="inline">
                 <label for="subject">
@@ -45,15 +38,16 @@
                 <label for="Message-text">
                     متن پیام: <span>*</span>
                 </label>
-                <textarea name="message" id="editor" required></textarea>
+                <textarea name="message" id="description" class="txtArea" required></textarea>
             </div>
-
+            <br>
             <div>
-                <button class="btn filled" type="submit" name="submit">
+                <button class="btn-primary" type="submit" name="submit">
                     ارسال
                 </button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
+
 </html>

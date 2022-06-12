@@ -1,6 +1,6 @@
 <?php
 include "dbConnect.php";
-include"../library/db.php";
+include "../library/db.php";
 include "../utils/security.php";
 if (Authorization::checkRole()){
     if (isset($_GET['del'])){

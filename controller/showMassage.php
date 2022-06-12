@@ -1,5 +1,5 @@
 <?php
-include"dbConnect.php";
+include "dbConnect.php";
 include "../library/db.php";
 include "../utils/security.php";
 if (Authorization::checkRole()) {
@@ -8,8 +8,8 @@ if (Authorization::checkRole()) {
 //query
     $qu = "select * from tickets";
 //execute query
-    $result = $connectDB -> query($qu);
-    $message = $result->fetchAll();
+    $connectDB -> query($qu);
+    $message = $connectDB -> fetchAll();
     $connectDB ->close();
 
     include "../view/message.php";

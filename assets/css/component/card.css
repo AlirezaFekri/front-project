@@ -1,19 +1,32 @@
-.card{
-    border-radius: 12px;
-    overflow: hidden;
-}
-.card.outlined{
-    border: 1px solid black;
-}
-.card.filled{
-    background-color: #04AA6D ;
-}
-.card-title{
+@import url(../colorPallete.css);
 
+.card {
+  margin-right: 10px;
+  margin-top: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.342);
+  background-color: var(--n4);
 }
-.card-body{
-    padding: 16px;
+
+.card.filled {
+  background-color: #04aa6d;
 }
-.card-img-top{
-    width: 100%;
+.card-title {
+  font-weight: bold;
+  color: var(--n2);
+}
+.card-body {
+  padding: 16px;
+}
+.card-img-top {
+  width: 100%;
+}
+.price {
+  font-size: 0.8em;
+  color: var(--p1);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.like {
 }

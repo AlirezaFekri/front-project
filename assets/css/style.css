@@ -4,9 +4,15 @@
 @import url("component/component.css");
 @import url("table.css");
 @import url("layout/layout.css");
-img{
-    max-width: 100%;
+@import url("./colorPallete.css");
+
+#like {
+  font-size: 30px;
+  color: red;
 }
-body{
-    background-color: var(--md-sys-color-background-light);
+.like {
+  text-align: left;
+}
+img {
+  max-width: 100%;
 }

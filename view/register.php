@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    <div class="content-center">
-        <form name="register-form" method = "post">
+    <div class="form">
+        <form name="register-form" method="post">
 
             <div id="error" class="error">
                 وارد کردن تمام مقادیر ستاره دار الزامی می باشد.
             </div>
             <h1>ثبت نام</h1>
-            <div class = "centeral">
+            <div class="centeral">
                 <label for="name">نام و نام خانوادگی:
                     <span>*</span>
                 </label>
@@ -35,18 +37,18 @@
             </div>
             <br>
             <div>
-                <label for="phoneNumber" required > شماره تلفن:
-                    <span>*</span
-                    ></label>
+                <label for="phoneNumber" required> شماره تلفن:
+                    <span>*</span></label>
                 <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="11">
             </div>
             <br>
             <div>
-                <button class="btn filled" type="submit" name="submit">ارسال</button>
+                <button class="btn-primary" type="submit" name="submit">ارسال</button>
             </div>
 
 
         </form>
 
 </body>
+
 </html>

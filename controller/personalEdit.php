@@ -17,7 +17,7 @@ if ($user) {
         $email = $_POST['email'];
         $address = $_POST['address'];
 
-        if (isset($password) && $password !== "") {
+        if (isset($password) && !($password == "")) {
             //Query
             $qu = "UPDATE users SET fullname = ?,
                     pass = ?, 
@@ -27,7 +27,7 @@ if ($user) {
             where phone_number = ?";
 
             //execute query
-            $result = $connectDB->query($qu, $fullname, $password, $phoneNumber, $email, $address,$user);
+            $result = $connectDB->query($qu, $fullname, $password, $phoneNumber, $email, $address,$id);
 
             //close DB
             $connectDB->close();
@@ -42,7 +42,7 @@ if ($user) {
             where phone_number = ?";
 
             //execute query
-            $result = $connectDB->query($qu, $fullname, $phoneNumber, $email, $address,$user);
+            $result = $connectDB->query($qu, $fullname, $phoneNumber, $email, $address,$id);
 
             //close DB
             $connectDB->close();

@@ -1,6 +1,6 @@
 <?php
 include "dbConnect.php";
-include"../library/db.php";
+include "../library/db.php";
 include "../utils/security.php";
 $status = Authentication::check();
 

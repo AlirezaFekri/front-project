@@ -1,37 +1,40 @@
-.datatable{
-    border: 1px solid ;
-    border-radius: 4px;
-    border-collapse: collapse;
-    margin: 5% auto;
+@import url(../colorPallete.css);
+
+.datatable {
+  border-radius: 5px;
+  border-collapse: collapse;
+  margin: 5% auto;
+  background-color: var(--n5);
+  color: var(--n1);
 }
-.datatable thead{
-    height: 56px;
+.datatable thead {
+  height: 56px;
 }
-.datatable tbody tr{
-    height: 52px;
-    border-top: 1px solid;
-    font-size: 1.2em;
-    text-align: center;
+.datatable tbody tr {
+  height: 52px;
+  border-top: 1px solid;
+  font-size: 1.2em;
+  text-align: center;
 }
 
-.datatable tbody th{
-    border: 1px solid ;
-    height: 20%;
-    font-size: 1.2em;
-    text-align: center;
+.datatable tbody th {
+  border: 1px solid;
+  height: 20%;
+  font-size: 1.2em;
+  text-align: center;
 }
-.datatable tbody td{
-    padding-right: 16px;
-    max-width: fit-content;
-    text-align: right;
+.datatable tbody td {
+  padding-right: 16px;
+  max-width: fit-content;
+  text-align: right;
 }
-.datatable tbody td:nth-child(3):not(tr:nth-child(1)){
-    text-align: left;
+.datatable tbody td:nth-child(3):not(tr:nth-child(1)) {
+  text-align: left;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-a:visited{
-    color: inherit;
+a:visited {
+  color: inherit;
 }

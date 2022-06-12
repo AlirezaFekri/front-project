@@ -7,7 +7,7 @@ if (Authorization::checkRole()) {
     if (isset($_POST['submit'])) {
 
         $name = $_POST['name'];
-        $pic = $_FILES['pic'];
+        $pic = $_FILES['product-pic'];
         $des = $_POST['description'];
         $count = $_POST['count'];
         $category = $_POST['cat'];
