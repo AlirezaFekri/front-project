@@ -37,9 +37,16 @@
             </div>
             <br>
             <div>
+<<<<<<< HEAD
                 <label for="phoneNumber" required> شماره تلفن:
                     <span>*</span></label>
                 <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="11">
+=======
+                <label for="phoneNumber" required > شماره تلفن:
+                    <span>*</span
+                    ></label>
+                <input type="text" name="phoneNumber" id="phoneNumber" maxlength="11">
+>>>>>>> 6ac56a4d18c7df1b46117dd2ef69165aedfefd27
             </div>
             <br>
             <div>

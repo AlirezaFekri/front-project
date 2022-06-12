@@ -10,6 +10,7 @@
     <title>نمایش کالا </title>
 </head>
 
+<<<<<<< HEAD
 <body>
     <div class="header">
         <h1>کالا ها</h1>
@@ -23,6 +24,9 @@
     </div>
 
     <script src="./../assets/js/like.js"></script>
+=======
+<script src="./../assets/js/like.js"></script>
+>>>>>>> 6ac56a4d18c7df1b46117dd2ef69165aedfefd27
 </body>
 
 </html>

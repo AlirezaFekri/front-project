@@ -4,6 +4,7 @@
 @import url("component/component.css");
 @import url("table.css");
 @import url("layout/layout.css");
+<<<<<<< HEAD
 @import url("./colorPallete.css");
 
 #like {
@@ -15,4 +16,16 @@
 }
 img {
   max-width: 100%;
+=======
+#like{
+    font-size: 30px;
+    color: red;
+}
+.like{
+    text-align: left;
+
+}
+img{
+    max-width: 100%;
+>>>>>>> 6ac56a4d18c7df1b46117dd2ef69165aedfefd27
 }
